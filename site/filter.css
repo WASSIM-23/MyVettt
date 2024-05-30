@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image:url("homebg.jpg");
+    margin:auto ;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    background-repeat:repeat ; 
+    width: 100%;
+    height: 100vh;
+
+
+}
+header{
+  width: 100%;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #c4c2c25e;
+}
+header h1{
+  margin-left: 30px;
+ 
+}
+
+
+.nav ul {
+  display: flex;
+  margin: 20px;
+  
+  
+}
+.nav ul li{
+  list-style: none;
+  justify-content: center;
+  margin: 0 10px;
+  position: relative;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;     
+  transition: 0.5s;
+}
+.nav ul li:hover{
+  background-color: #837f8696;
+  box-shadow: 0 0 25px    #837f8696;}
+.nav ul li a {
+      text-decoration: none;
+      color: purple;
+  }
+  .item:hover{
+      width: 300px; 
+      transition: 2s;}
+      .dropdown{
+          display: none;
+      }
+     .nav ul li:hover .dropdown {
+          display: block;
+          position: absolute;
+          left: 0;
+          top:100%;
+          background-color: #c4c2c2b7;
+      }
+      .nav .dropdown ul{
+          display: block;
+          margin: 10px;
+      }
+     .nav .dropdown ul li {
+          width: 150px;
+          padding: 10px;
+          
+      }
+     header span{
+          margin-right: 30px;
+          font-weight: 700;
+          cursor:grab;
+      }
+      span a {
+      text-decoration: none;
+      padding: 10px 10px;
+      border-radius: 10px;
+      color: purple;
+      }
+      span :hover{
+          background-color: #837f8696;
+          box-shadow: 0 0 25px    #837f8696;
+      }
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+.container {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+.input-field {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+  button {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    background: #1875FF;
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0px 14px 56px -11px #1875FF;
+    width: 15em;
+    padding: 1em;
+    transition: all 0.4s;
+    cursor: pointer;
+   }
+   .dogs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none; /* Masquer la liste par défaut */
+}
+.dogs li {
+    padding: 8px;
+    cursor: pointer;
+}
+.dogs li:hover {
+    background-color: #f0f0f0;
+}
+.butt{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Style de la liste des suggestions */
+#suggestions-list {
+  margin-top: 10px; /* Espace entre l'input et la liste */
+  padding: 0; /* Supprime les marges internes */
+  list-style-type: none; /* Supprime les puces de la liste */
+  max-height: 200px; /* Hauteur maximale de la liste */
+  overflow-y: auto; /* Afficher une barre de défilement verticale si nécessaire */
+  
+  border-radius: 4px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+/* Style des éléments de la liste */
+#suggestions-list li {
+  padding: 8px 12px; /* Espacement interne */
+  cursor: pointer; /* Pointeur de souris sur les éléments */
+  border-bottom: 1px solid #eee; /* Ligne de séparation entre les éléments */
+}
+
+/* Changer la couleur de fond au survol */
+#suggestions-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.fedback{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(to right,#1875FF ,transparent 10%);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px); 
+}
+.fedback p{
+  font-size: 14px;
+  font-weight: 700;
+}

@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-image:url("homebg.jpg");
+  background-repeat:repeat ; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 0px;
+}
+
+.container {
+  margin-top: 50px;
+  width: 700px;
+  padding: 20px;
+  background:transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1PX #000 solid;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group select{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  padding: 0 5px;
+  color: #666;
+  font-size: 14px;
+  transition: top 0.3s ease, font-size 0.3s ease;
+}
+
+.form-group input:focus {
+  border-bottom: 1px solid #007BFF;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: #007BFF;
+}
+
+.forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label input {
+  margin-right: 8px;
+}
+
+.forget a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.create-account p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.create-account a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}

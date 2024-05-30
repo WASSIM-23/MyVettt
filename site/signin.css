@@ -1,0 +1,108 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #c4c2c25e;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1{
+    margin-left: 30px;
+}
+
+
+ul {
+    display: flex;
+    margin: 20px;
+    
+}
+ ul li{
+    list-style: none;
+    justify-content: center;
+    margin: 0 10px;
+    position: relative;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;     
+    transition: 0.5s;
+}
+ ul li:hover{
+    background-color: #837f8696;
+    box-shadow: 0 0 25px    #837f8696;}
+    ul li a {
+        text-decoration: none;
+    }
+    .item:hover{
+        width: 300px; 
+        transition: 2s;}
+        span{
+            margin-right: 30px;
+            font-weight: 700;
+            cursor:grab;
+        }
+        span a {
+        text-decoration: none;
+        padding: 10px 10px;
+        border-radius: 10px;
+        }
+        span :hover{
+            background-color: #837f8696;
+            box-shadow: 0 0 25px    #837f8696;
+        }
+        .dropdown{
+            display: none;
+        }
+        ul li:hover .dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            top:100%;
+            background-color: #c4c2c2b7;
+        }
+        .dropdown ul{
+            display: block;
+            margin: 10px;
+        }
+        .dropdown ul li {
+            width: 150px;
+            padding: 10px;
+            
+        }
+        .choisse{
+            width: 700px;
+            height: 200px;
+            background-color: rgb(179, 175, 175);
+            margin: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            transition: 0.5s;
+           
+        }
+        .choisse:hover{
+            box-shadow: 0 0 35px gray;
+            transform: scale(1.1);
+            color: white;
+        }
+        .choisse a{
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+            
+        }
+        h1{
+            margin: 20px;
+        }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations de l'animal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destination.css">
+</head>
+
+<body>
+    
+
+    <div id="animalInfo">
+        <!-- Les informations de l'animal seront affichées ici -->
+        
+    </div>
+    <div id="selected-symptoms">Symptômes sélectionnés :</div>
+    <div class="animal-Name">ssss</div>
+    <script>
+        // Fonction pour afficher les données de l'URL
+        function displayAnimalInfo() {
+            // Récupération des données de l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const animalName = urlParams.get("animalName");
+            const animalDob = urlParams.get("animalDob");
+            const gender = urlParams.get("gender");
+            const race = urlParams.get("race");
+            const corpulence = urlParams.get("corpulence");
+            const particulars = urlParams.get("particulars");
+            const selectedsymptoms = urlParams.get("selectedsymptoms");
+            
+            
+            // Créez des éléments pour afficher les informations
+            const animalInfoDiv = document.getElementById("animalInfo");
+            animalInfoDiv.innerHTML = `
+                <p><strong> Chien:</strong>
+                     ${animalName}
+                      ${animalDob} ${gender} ${race} ${corpulence} ${particulars}</p>
+                <p><strong>Date de naissance :</strong> ${animalDob}</p>
+                <p><strong>Sexe :</strong> ${gender}</p>
+                <p><strong>Race :</strong> ${race}</p>
+                <p><strong>Corpulence :</strong> ${corpulence}</p>
+                <p><strong>Cas particulier :</strong> ${particulars}</p>
+                <p><strong>selected symptoms :</strong> ${selectedsymptoms}</p>
+            `;
+        }
+
+        // Appel de la fonction d'affichage des informations au chargement de la page
+        window.addEventListener('DOMContentLoaded', displayAnimalInfo);
+        document.addEventListener('DOMContentLoaded', () => {
+            // Récupérer les symptômes sélectionnés depuis localStorage
+            const selectedSymptoms = JSON.parse(localStorage.getItem('selectedSymptoms'));
+            
+            // Vérifier si des symptômes ont été stockés
+            if (selectedSymptoms && selectedSymptoms.length > 0) {
+                // Mettre à jour le div 'selected-symptoms' avec les symptômes sélectionnés
+                const selectedSymptomsDiv = document.getElementById('selected-symptoms');
+                selectedSymptomsDiv.textContent = `Symptômes sélectionnés : ${selectedSymptoms.join(', ')}`;
+            }
+        });
+        window.addEventListener('DOMContentLoaded', displayAnimalInfo);
+        document.addEventListener('DOMContentLoaded', () => {
+        const animalName = JSON.parse(localStorage.getItem('animalName')) ;
+            if (animalName && animalName.length > 0) {
+                // Mettre à jour le div 'selected-symptoms' avec les symptômes sélectionnés
+                const selectedanimalname = document.getElementById('animal-Name');
+               selectedanimalname.textContent = `animalName : ${animalName.join(', ')}`;
+            } });
+    </script>
+    
+<script>
+
+</script>
+
+</body>
+
+</html>
